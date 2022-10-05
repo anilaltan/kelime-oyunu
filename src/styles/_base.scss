@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $g-body-background-color;
+  color: $g-text-color;
+  font-family: $g-font-family-base;
+  font-size: $g-font-size-base;
+  line-height: $g-line-height-base;
+  text-align: left;
+}
+
+h1,
+.h1 {
+  font-size: $g-font-size-h1;
+}
+
+h2,
+.h2 {
+  font-size: $g-font-size-h2;
+}
+
+h3,
+.h3 {
+  font-size: $g-font-size-h3;
+}

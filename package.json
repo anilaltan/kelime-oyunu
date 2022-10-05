@@ -6,15 +6,47 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "yarn lint -- --fix",
+    "format": "prettier --write ./**/*.{js,jsx}",
+    "svgr": "svgr src/icons -d src/components/icons --replace-attr-values \"#fff=currentColor\" --replace-attr-values \"#000=currentColor\" --svgo-config .svgorc.json",
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.54.8"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@svgr/cli": "5.5.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-storybook": "^0.6.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "storybook-css-modules": "^1.0.8"
   }
 }
